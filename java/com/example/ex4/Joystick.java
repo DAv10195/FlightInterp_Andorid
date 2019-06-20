@@ -50,8 +50,8 @@ public class Joystick extends SurfaceView implements SurfaceHolder.Callback, Vie
     {
         centerX = getWidth() / 2;
         centerY = getHeight() / 2;
-        baseRadius = Math.min(getWidth(), getHeight()) / 3;
-        hatRadius = Math.min(getWidth(), getHeight()) / 5;
+        baseRadius = Math.min(getWidth(), getHeight()) / 4;
+        hatRadius = Math.min(getWidth(), getHeight()) / 7;
     }
     //method to be called when Joystick surface is created
     @Override
@@ -71,7 +71,7 @@ public class Joystick extends SurfaceView implements SurfaceHolder.Callback, Vie
     @Override
     public void surfaceDestroyed(SurfaceHolder surfaceHolder)
     {
-        UserHandler.getInstance().disconnect();
+        //nothing...
     }
     /*when Joystick is touched, method will be called and will compute values to be sent as
     * arguments to the JoystickCallBack onJoystickMoved even handler*/
@@ -112,10 +112,10 @@ public class Joystick extends SurfaceView implements SurfaceHolder.Callback, Vie
         {
             Canvas drawCanvas = this.getHolder().lockCanvas();
             Paint colors = new Paint();
-            drawCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
-            colors.setARGB(255, 50, 50, 50);
+            drawCanvas.drawColor(Color.WHITE);
+            colors.setARGB(175, 50, 50, 50);
             drawCanvas.drawCircle(centerX, centerY, baseRadius, colors);
-            colors.setARGB(255, 0, 0, 255);
+            colors.setARGB(200, 50, 50, 200);
             drawCanvas.drawCircle(x, y, hatRadius, colors);
             getHolder().unlockCanvasAndPost(drawCanvas);
         }

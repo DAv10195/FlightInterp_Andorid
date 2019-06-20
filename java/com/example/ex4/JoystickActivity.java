@@ -18,4 +18,10 @@ public class JoystickActivity extends AppCompatActivity implements Joystick.Joys
         handler.send_message(true, xPercent); //true is aileron
         handler.send_message(false, yPercent); //false is elevator
     }
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        UserHandler.getInstance().disconnect();
+    }
 }

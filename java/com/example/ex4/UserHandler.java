@@ -59,9 +59,7 @@ public class UserHandler
                     {
                         synchronized (this)
                         {
-                            if (message != null) {
-                                writer.print(message);
-                                message = null; }
+                            if (message != null) { writer.printf(message); message = null; }
                         }
                     }
                     sock.close();
@@ -101,6 +99,7 @@ public class UserHandler
         {
             aileron_or_elevator = aileron_path;
         }
+        if (val < 0.99 && val > -0.99) { val *= -1; }
         synchronized (this)
         {
             message = "set " + aileron_or_elevator + " " + Float.toString(val) + " \r\n";
