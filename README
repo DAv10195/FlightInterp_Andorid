@@ -1,0 +1,11 @@
+Created By David Abramov and Nikita Kogan.
+
+The Android version of our ongoing project with the FlighGear simulator.
+
+upon lunching this application, you will be requested to input the IP of the machine running FlightGear
+and the port on which FlightGear was instructed to accept connections from.
+
+once connected, a new activity will show a joystick, which can be used to fly the plane simulated on FlighGear,
+controlling the aileron and elevator values (horizontal axe - aileron, vertical axe - elevator).
+
+enjoy FlightInterp Android!
