@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ex4</string>
+    <string name="welcome_str">Welcome To FlightInterp Android</string>
+    <string name="ip_str">IP:</string>
+    <string name="port_str">Port:</string>
+    <string name="ip_val_str">Enter IP here</string>
+    <string name="port_val_str">Enter port here</string>
+    <string name="connect_str">Connect</string>
+    <string name="title_activity_joystick">JoystickActivity</string>
+</resources>
